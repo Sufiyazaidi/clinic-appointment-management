@@ -57,7 +57,7 @@ All endpoints can be tested using the provided Postman collection.
 The Postman collection is located at:
 
 ```
-CLIENTAPPOINTMENT/postman/Clinic_Appointment_Postman_Collection.json
+ClinicAppointment/Postman/Clinic_Appointment_Postman_Collection.json
 ```
 
 > The `postman` folder is at the root of the project, alongside `src`, `README.md`, etc.
@@ -69,7 +69,7 @@ CLIENTAPPOINTMENT/postman/Clinic_Appointment_Postman_Collection.json
 3. Choose the file:
 
    ```
-   CLIENTAPPOINTMENT/postman/Clinic_Appointment_Postman_Collection.json
+   ClinicAppointment/Postman/Clinic_Appointment_Postman_Collection.json
    ```
 4. After importing, you will see a collection named **Clinic Appointment Management System**.
 5. Expand it to view and test all available API requests.
@@ -109,4 +109,5 @@ Once the app is running and Postman collection is imported, you're all set to te
 * Add a patient
 * Book an appointment
 * View appointments by doctor/date
+
 
