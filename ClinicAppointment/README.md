@@ -1,4 +1,3 @@
-Here's your cleaned-up and complete `README.md` with clear formatting and guidance on how to run and test the Clinic Appointment 
 # 🏥 Clinic Appointment Management System
 
 A lightweight RESTful Spring Boot application to manage appointments between doctors and patients using in-memory data storage (Maps/Lists). The system supports booking appointments, listing doctors/patients/appointments, and filtering available slots by date.
@@ -109,5 +108,6 @@ Once the app is running and Postman collection is imported, you're all set to te
 * Add a patient
 * Book an appointment
 * View appointments by doctor/date
+
 
 
