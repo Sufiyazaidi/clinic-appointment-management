@@ -1,0 +1,17 @@
+clinic\ClinicAppointment\service\PatientService.class
+clinic\ClinicAppointment\controllers\PatientController.class
+clinic\ClinicAppointment\repository\PatientRepository.class
+clinic\ClinicAppointment\ClinicAppointmentApplication.class
+clinic\ClinicAppointment\repository\DoctorRepository.class
+clinic\ClinicAppointment\exception\GlobalExceptionHandler.class
+clinic\ClinicAppointment\models\Patient.class
+clinic\ClinicAppointment\exception\SlotAlreadyBookedException.class
+clinic\ClinicAppointment\controllers\DoctorController.class
+clinic\ClinicAppointment\service\AppointmentService.class
+clinic\ClinicAppointment\exception\InvalidSlotException.class
+clinic\ClinicAppointment\models\Appointment.class
+clinic\ClinicAppointment\models\Doctor.class
+clinic\ClinicAppointment\repository\AppointmentRepository.class
+clinic\ClinicAppointment\service\DoctorService.class
+clinic\ClinicAppointment\controllers\AppointmentController.class
+clinic\ClinicAppointment\exception\ResourceNotFoundException.class

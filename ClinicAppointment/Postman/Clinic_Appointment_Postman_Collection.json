@@ -1,0 +1,258 @@
+{
+    "info": {
+        "name": "Clinic Appointment Management System",
+        "_postman_id": "clinic-appointment-system",
+        "description": "Postman collection to test Doctor, Patient, and Appointment APIs.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Add Doctor",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"Dr. Aisha Khan\",\n    \"specialization\": \"Dermatology\",\n    \"availableSlots\": [\n        \"2025-08-05T10:00:00\",\n        \"2025-08-05T11:00:00\"\n    ]\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/doctors",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "doctors"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get All Doctors",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/doctors",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "doctors"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Doctor by ID",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/doctors/1",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "doctors",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Add Patient",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"John Doe\",\n    \"age\": 30,\n    \"gender\": \"Male\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/patients",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "patients"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get All Patients",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/patients",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "patients"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Book Appointment - Valid",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:8080/appointments?doctorId=1&patientId=1&slot=2025-08-05T10:00:00",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "appointments"
+                    ],
+                    "query": [
+                        {
+                            "key": "doctorId",
+                            "value": "1"
+                        },
+                        {
+                            "key": "patientId",
+                            "value": "1"
+                        },
+                        {
+                            "key": "slot",
+                            "value": "2025-08-05T10:00:00"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Book Appointment - Already Booked Slot",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:8080/appointments?doctorId=1&patientId=2&slot=2025-08-05T10:00:00",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "appointments"
+                    ],
+                    "query": [
+                        {
+                            "key": "doctorId",
+                            "value": "1"
+                        },
+                        {
+                            "key": "patientId",
+                            "value": "2"
+                        },
+                        {
+                            "key": "slot",
+                            "value": "2025-08-05T10:00:00"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Book Appointment - Invalid Slot",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:8080/appointments?doctorId=1&patientId=1&slot=2025-08-05T15:00:00",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "appointments"
+                    ],
+                    "query": [
+                        {
+                            "key": "doctorId",
+                            "value": "1"
+                        },
+                        {
+                            "key": "patientId",
+                            "value": "1"
+                        },
+                        {
+                            "key": "slot",
+                            "value": "2025-08-05T15:00:00"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get All Appointments",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/appointments",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "appointments"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Appointments by Doctor",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/appointments/doctor/1",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "appointments",
+                        "doctor",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Doctor by ID with Date Filter (Available Slots)",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/doctors/1?date=2025-08-05",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "doctors",
+                        "1"
+                    ],
+                    "query": [
+                        {
+                            "key": "date",
+                            "value": "2025-08-05"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
